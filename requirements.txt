@@ -7,3 +7,8 @@ numpy
 scipy
 pytest
 httpx
+torch
+transformers
+torchaudio
+google-generativeai
+

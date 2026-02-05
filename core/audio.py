@@ -19,8 +19,8 @@ def decode_audio(base64_string: str) -> np.ndarray:
         
         try:
             # Load audio using librosa
-            # sr=None preserves original sampling rate
-            y, sr = librosa.load(temp_path, sr=None)
+            # sr=16000 is crucial for Wav2Vec2 and deepfake detection models
+            y, sr = librosa.load(temp_path, sr=16000)
             return y, sr
         finally:
             # Cleanup temp file
